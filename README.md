@@ -94,13 +94,12 @@ npm install
 
 3. Create a `.env` file in the client directory:
 ```env
-REACT_APP_API_URL=http://localhost:8000
-REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
+VITE_APP_API_URL=http://localhost:8000
 ```
 
 4. Start the development server:
 ```bash
-npm start
+npm run dev
 ```
 
 ## API Documentation
@@ -116,8 +115,6 @@ npm start
 - `GET /api/products/` - List all products
 - `GET /api/products/{id}/` - Get product details
 - `POST /api/products/` - Create new product (admin only)
-- `PUT /api/products/{id}/` - Update product (admin only)
-- `DELETE /api/products/{id}/` - Delete product (admin only)
 
 ### Order Endpoints
 
@@ -144,13 +141,11 @@ The application uses SMTP for sending emails. Configure your email settings in t
 2. Get your API keys from the Stripe Dashboard
 3. Add the keys to your environment variables:
    - Backend: STRIPE_SECRET_KEY
-   - Frontend: REACT_APP_STRIPE_PUBLIC_KEY
 
 ## Development
 
 - Backend runs on http://localhost:8000
-- Frontend runs on http://localhost:3000
-- API documentation available at http://localhost:8000/api/docs/
+- Frontend runs on http://localhost:5173
 
 ## Production Deployment
 
